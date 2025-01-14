@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const Comment = require("../models/commentModel");
+const Comment = require("./commentModel");
 const router = express.Router();
 
 const deletePhrase = process.env.deletePhrase;
