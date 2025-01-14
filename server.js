@@ -7,7 +7,13 @@ const commentRoutes = require("routes/commentRoutes.js");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://sean-hyde-portfolio.vercel.app", // Replace with your actual Vercel frontend URL
+    methods: "GET,POST,DELETE,OPTIONS",
+    allowedHeaders: "Content-Type,Authorization",
+  })
+);
 app.use(express.json());
 
 mongoose.connect("mongodb://127.0.0.1:27017/commentsDB");
