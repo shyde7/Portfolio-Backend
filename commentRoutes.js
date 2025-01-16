@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const Comment = require("/Users/sean/Desktop/Portfolio-Backend/commentModel.js");
+const Comment = require("./commentModel.js");
 const router = express.Router();
 
 const deletePhrase = process.env.deletePhrase;
