@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const commentRoutes = require("commentRoutes.js");
+const commentRoutes = require("/Users/sean/Desktop/Portfolio-Backend/commentRoutes.js");
 
 const app = express();
 
