@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const commentRoutes = require("./commentRoutes.js");
 
+const MONGO_URI = process.env.MONGO_URI;
+
 const app = express();
 
 app.use(
@@ -16,11 +18,10 @@ app.use(
 );
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/commentsDB");
-
-mongoose.connection.once("open", () => {
-  console.log("Connected to MongoDB");
-});
+mongoose
+  .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("Connected to MongoDB Atlas!"))
+  .catch((err) => console.error("Connection error", err));
 
 app.use("/api/comments", commentRoutes);
 
