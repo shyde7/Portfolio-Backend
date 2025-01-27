@@ -9,9 +9,6 @@ This is a backend API built with Node.js, Express, and MongoDB for managing comm
 - [Technologies Used](#technologies-used)
 - [Live API](#live-api)
 - [Folder Structure](#folder-structure)
-- [Environment Variables](#environment-variables)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
